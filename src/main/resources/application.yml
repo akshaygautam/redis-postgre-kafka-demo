@@ -1,0 +1,22 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://192.168.0.175:5432/personal
+    username: postgres
+    password: postgres
+    name: personal
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    database: default
+    openInView: false
+    show-sql: true
+    generate-ddl: true
+    hibernate:
+      ddl-auto: create
+  cache:
+    type: redis
+  redis:
+    host: 192.168.0.175
+    port: 6379
+
+kafka:
+  bootstrap-servers: 192.168.0.175:9092
